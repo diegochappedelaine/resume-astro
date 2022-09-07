@@ -1,14 +1,15 @@
 ---
 export interface Props extends astroHTML.JSX.InputHTMLAttributes {
   label: string;
+  className?: string;
 }
 
-const { label, ...props } = Astro.props;
+const { label, className, ...props } = Astro.props;
 ---
 
 <label
   for="status"
-  class="relative inline-flex cursor-pointer items-center gap-2"
+  class={`relative flex cursor-pointer items-center gap-2 ${className ?? ''}`}
 >
   <input
     type="checkbox"

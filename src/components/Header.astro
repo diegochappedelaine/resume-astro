@@ -12,11 +12,16 @@ const { name, label, summary, status } = Astro.props;
 ---
 
 <header class="flex flex-col gap-5">
-  <h1 class="text-3xl md:text-4xl font-bold">
+  <h1 class="text-4xl font-bold">
     {name},<br />
     {label}
   </h1>
-  <Checkbox label={status} checked={Boolean(status)} disabled />
+  <Checkbox
+    label={status}
+    checked={Boolean(status)}
+    disabled
+    className="hidden md:flex"
+  />
   <p class="md:w-5/6">
     {
       summary.map((item, index) => {
