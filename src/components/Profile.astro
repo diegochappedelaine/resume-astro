@@ -1,0 +1,35 @@
+---
+import { SocialIcons } from '../assets';
+import type { Social, Location, SocialProfiles } from '../data';
+import { splitStringInFragmentOfNChar } from '../utils';
+
+export interface Props {
+  email: string;
+  phone: string;
+  location: Location;
+  socialProfiles: SocialProfiles[];
+}
+
+const { email, phone, location, socialProfiles } = Astro.props;
+---
+
+<section class="flex flex-col items-start gap-2">
+  <a class="hover:underline" href={`mailto:${email}`}>
+    {email}
+  </a>
+  <a class="hover:underline" href={`tel:${phone}`}>
+    {splitStringInFragmentOfNChar(phone, 2)?.join(' ')}
+  </a>
+  <p>{`${location.city}, ${location.country}`}</p>
+  {
+    socialProfiles.map((profile) => {
+      const path = SocialIcons[profile.network as Social] ?? null;
+      return (
+        <a href={profile.url} target="_blank" class="flex items-center gap-3">
+          {path && <img src={path} />}
+          <span class="underline">{profile.label}</span>
+        </a>
+      );
+    })
+  }
+</section>

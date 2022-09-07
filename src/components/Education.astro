@@ -1,0 +1,17 @@
+---
+import type { Education as EducationType } from '../data';
+
+export interface Props {
+  education: EducationType;
+}
+
+const { education } = Astro.props;
+---
+
+<article>
+  <h3 class="text-xl font-semibold">{education.label}</h3>
+  <p class="font-normal">
+    {`${education.institution} | `}
+    <span class="text-gray-500">{education.date}</span>
+  </p>
+</article>

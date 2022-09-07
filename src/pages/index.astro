@@ -1,96 +1,74 @@
 ---
+import { user } from '../data';
+import Education from '../components/Education.astro';
+import Header from '../components/header.astro';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Profile from '../components/Profile.astro';
+import Section from '../components/Section.astro';
+import WorkExperience from '../components/WorkExperience.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Diego Chappedelaine">
+  <main
+    class="container mx-auto grid max-w-5xl grid-cols-1 gap-10 px-8 py-16 md:grid-cols-main md:gap-8"
+  >
+    <img
+      class="h-auto w-32 rounded-full md:col-span-2 md:-ml-4"
+      src="./profile-pic.jpg"
+      alt={user.name}
+    />
+    <Header
+      name={user.name}
+      label={user.label}
+      summary={user.summary}
+      status={user.status}
+    />
+    <Profile
+      email={user.email}
+      location={user.location}
+      phone={user.phone}
+      socialProfiles={user.profiles}
+    />
+    <Section title="Expériences">
+      <ul class="flex flex-col gap-8">
+        {
+          user.work.map((work) => (
+            <li>
+              <WorkExperience work={work} />
+            </li>
+          ))
+        }
+      </ul>
+    </Section>
+    <div
+      class="flex justify-between gap-14 md:flex-col md:justify-start flex-wrap"
+    >
+      <Section title="Compétences">
+        <ul>
+          {user.skills.map((skill) => <li class="font-medium">{skill}</li>)}
+        </ul>
+      </Section>
+      <Section title="Education">
+        <ol class="flex flex-col gap-4">
+          {
+            user.education.map((education) => (
+              <li class="font-medium">
+                <Education education={education} />
+              </li>
+            ))
+          }
+        </ol>
+      </Section>
+      <Section className="hidden md:block" title="Divers">
+        <ul>
+          {user.miscs.map((interest) => <li>{interest}</li>)}
+        </ul>
+      </Section>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
-
-	h1 {
-		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  :root {
+  }
 </style>

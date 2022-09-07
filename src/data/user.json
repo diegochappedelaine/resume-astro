@@ -1,0 +1,130 @@
+{
+  "name": "Diego Chappedelaine",
+  "label": "Frontend Developer",
+  "summary": [
+    "Passionné de code, je développe aussi bien des interfaces front que du backend, principalement en React et NodeJS avec une forte appétence pour TypeScript. J’aime apprendre, comprendre et tester.",
+    "Rendre l’expérience utilisateur la plus agréable et fun possible."
+  ],
+  "email": "chappedelaine.diego@gmail.com",
+  "phone": "0650254172",
+  "status": "Disponible",
+  "location": {
+    "city": "Paris",
+    "country": "France"
+  },
+  "profiles": [
+    {
+      "label": "github/diegochappedelaine",
+      "url": "https://github.com/diegochappedelaine",
+      "network": "github"
+    },
+    {
+      "label": "/in/diegochappedelaine",
+      "url": "https://www.linkedin.com/in/diegochappedelaine/",
+      "network": "linkedin"
+    }
+  ],
+  "work": [
+    {
+      "company": "Publicis Sapient",
+      "label": "Digital Business Transformation",
+      "position": "Frontend Developer",
+      "summary": [
+        "Développement d'une plateforme d'e-commerce en micro-frontend multi-tenant",
+        "Maintenance de librairie de composants",
+        "Développement d'un back-end for frontend avec GraphlQL et NodeJS"
+      ],
+      "start": "2021-10-01",
+      "end": "Now",
+      "url": "https://www.publicissapient.fr/",
+      "logo": "publicis-sapient",
+      "technos": [
+        "Next.js",
+        "NX",
+        "Apollo GraphQL",
+        "storybook",
+        "TypeScript",
+        "Jest",
+        "i18n"
+      ],
+      "localisation": "Paris"
+    },
+    {
+      "company": "Koliving",
+      "label": "Plateforme de location et gestion de colocation",
+      "position": "Frontend Developer",
+      "summary": [
+        "Développement de composants et architectures React au sein d'une équipe de 5 personnes",
+        "Développement d'une application de gestion de colocation (dépot de bien / dossier de location)",
+        "Développement d'un tunnel de réservation, intégration du payment via Stripe"
+      ],
+      "start": "2020-06-01",
+      "end": "2021-10-01",
+      "url": "https://www.koliving.fr/",
+      "logo": "koliving",
+      "technos": [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "Apollo GraphQL",
+        "styled-components"
+      ],
+      "localisation": "Paris"
+    },
+    {
+      "company": "Yonkt",
+      "label": "Media sneakers / streetwear",
+      "position": "Fullstack Developer",
+      "summary": [
+        "Développement d'une App en React Native avec login, flux d'actualité et calendrier",
+        "Développement du backend, API REST avec NodeJS et MongoDB",
+        "Web scrapping d'une dizaine de médias"
+      ],
+      "start": "2020-04-01",
+      "end": "2020-06-01",
+      "url": "https://yonkt.com/",
+      "logo": "yonkt",
+      "technos": [
+        "React Native",
+        "Expo",
+        "Redux",
+        "NodeJS",
+        "Express",
+        "MongoDB"
+      ],
+      "localisation": "Paris"
+    }
+  ],
+  "skills": [
+    "JavaScript natif (ES2020+)",
+    "React - React Native",
+    "SSR React (Next.js)",
+    "TypeScript",
+    "Redux",
+    "Git",
+    "GraphQL Apollo",
+    "NodeJS - ExpressJS",
+    "MongoDB - Mongoose"
+  ],
+  "education": [
+    {
+      "label": "Frontend Developer",
+      "institution": "Le Reacteur",
+      "date": "2020",
+      "logo": ""
+    },
+    {
+      "label": "Licence TAIS",
+      "institution": "IUT d'Allier",
+      "date": "2016 - 2017",
+      "logo": ""
+    },
+    {
+      "label": "BTS Audiovisuel",
+      "institution": "Lycée Suger",
+      "date": "2014 - 2016",
+      "logo": ""
+    }
+  ],
+  "miscs": ["Anglais courant", "Musicien (batteur) studio et live"]
+}

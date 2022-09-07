@@ -1,3 +1,5 @@
 {
-  "extends": "astro/tsconfigs/strictest"
+  "extends": "astro/tsconfigs/strictest",
+  "noImplicitAny": true,
+  "baseUrl": "./src",
 }

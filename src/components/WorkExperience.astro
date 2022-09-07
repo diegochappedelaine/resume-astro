@@ -1,0 +1,39 @@
+---
+import type { Work, WorkPlaces } from '../data';
+import { placeholder, WorkImagePaths } from '../assets';
+import { formatDate } from '../utils';
+
+export interface Props {
+  work: Work;
+}
+
+const { work } = Astro.props;
+const imgPath = WorkImagePaths[work.logo as WorkPlaces] || placeholder;
+---
+
+<article class="flex flex-col gap-2">
+  <p class="text-gray-500">
+    {`${formatDate(work.start)} - ${formatDate(work.end)}`}
+  </p>
+  <h3 class="font-bold">{work.position}</h3>
+  <div class="flex items-center gap-2">
+    <img
+      class="h-auto w-9 rounded-full border-2 border-gray-500"
+      src={imgPath}
+      alt={work.company}
+    />
+    <a
+      class="font-bold"
+      href={work.url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {work.company}
+    </a>
+    <p>{`${work.label}, ${work.localisation}`}</p>
+  </div>
+  <ul class="list-disc pl-6">
+    {work.summary.map((highlight) => <li>{highlight}</li>)}
+  </ul>
+  <p class="text-gray-500 underline">{`Stack: ${work.technos.join(', ')}`}</p>
+</article>

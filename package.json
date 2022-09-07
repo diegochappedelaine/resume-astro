@@ -10,6 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.1.6"
+    "astro": "^1.1.6",
+    "dayjs": "^1.11.5"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^1.0.0"
   }
 }
