@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -16,9 +16,48 @@ const { title } = Astro.props;
     <meta
       name="description"
       content="Passionné de code, je développe aussi bien des interfaces front que du backend, principalement en React et NodeJS avec une forte appétence pour TypeScript. J’aime apprendre, comprendre et tester.
-    
-    Rendre l’expérience utilisateur la plus agréable et fun possible."
+        
+        Rendre l’expérience utilisateur la plus agréable et fun possible."
     />
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Diego Chappedelaine" />
+    <meta
+      itemprop="description"
+      content="Passionné de code, je développe aussi bien des interfaces front que du backend, principalement en React et NodeJS avec une forte appétence pour TypeScript. J’aime apprendre, comprendre et tester.
+        
+        Rendre l’expérience utilisateur la plus agréable et fun possible."
+    />
+    <meta itemprop="image" content="" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://resume-astro.vercel.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Diego Chappedelaine" />
+    <meta
+      property="og:description"
+      content="Passionné de code, je développe aussi bien des interfaces front que du backend, principalement en React et NodeJS avec une forte appétence pour TypeScript. J’aime apprendre, comprendre et tester.
+        
+        Rendre l’expérience utilisateur la plus agréable et fun possible."
+    />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Diego Chappedelaine" />
+    <meta
+      name="twitter:description"
+      content="Passionné de code, je développe aussi bien des interfaces front que du backend, principalement en React et NodeJS avec une forte appétence pour TypeScript. J’aime apprendre, comprendre et tester.
+        
+        Rendre l’expérience utilisateur la plus agréable et fun possible."
+    />
+    <meta name="twitter:image" content="" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
     <slot />
