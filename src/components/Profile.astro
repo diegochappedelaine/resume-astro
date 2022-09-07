@@ -25,8 +25,8 @@ const { email, phone, location, socialProfiles } = Astro.props;
     socialProfiles.map((profile) => {
       const path = SocialIcons[profile.network as Social] ?? null;
       return (
-        <a href={profile.url} target="_blank" class="flex items-center gap-3">
-          {path && <img src={path} alt={profile.network} />}
+        <a href={profile.url} target="_blank" class="flex items-center gap-2">
+          {path && <img class="h-5 w-5" src={path} alt={profile.network} />}
           <span class="underline">{profile.label}</span>
         </a>
       );
